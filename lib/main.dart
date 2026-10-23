@@ -10,23 +10,36 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.white,
         body: Center(
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Étape 2 : Deux textes
-                Text('Hello World!'),
-                Text('Bienvenue dans Flutter'),
+                // Etape 2 : Textes
+                Text(
+                  'Hello World!',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.blue,
+                  ),
+                ),
 
-                // Étape 3 : Container stylisé
+                Text(
+                  'Bienvenue dans Flutter',
+                  style: TextStyle(fontSize: 16),
+                ),
+
+                // Etape 3 : Container stylise
                 Container(
                   margin: EdgeInsets.all(20),
-                  padding: EdgeInsets.all(16),
+                  padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    color: Colors.blueAccent,
-                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   child: Text(
                     'Boîte stylisée avec Container',
@@ -37,7 +50,7 @@ class MainApp extends StatelessWidget {
                   ),
                 ),
 
-                // Étape 4 : Stack
+                // Etape 4 : Stack
                 Stack(
                   alignment: Alignment.center,
                   children: [
@@ -61,7 +74,9 @@ class MainApp extends StatelessWidget {
                   ],
                 ),
 
-                // Étape 5 : Row avec quatre icônes
+                SizedBox(height: 20),
+
+                // Etape 5 : Row avec 4 icones
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -73,21 +88,31 @@ class MainApp extends StatelessWidget {
                   ],
                 ),
 
-                // Étape 6 : Deuxième Column
+                SizedBox(height: 20),
+
+                // Etape 6 : Deuxieme Column
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
                       'Titre principal',
-                      style: TextStyle(fontSize: 22),
+                      style: TextStyle(
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.deepPurple,
+                      ),
                     ),
                     SizedBox(height: 20),
-                    Text('Sous-titre ou description'),
+                    Text(
+                      'Sous-titre ou description',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    SizedBox(height: 10),
                     Icon(
                       Icons.thumb_up,
                       color: Colors.green,
-                      size: 40,
+                      size: 50,
                     ),
                   ],
                 ),
